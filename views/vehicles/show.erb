@@ -1,0 +1,55 @@
+<h1> Vehicles</h1>
+
+
+<table>
+
+  <tr>
+    <th>Make</th>
+    <th></th>
+    <th>Model</th>
+    <th></th>
+    <th>Colour</th>
+    <th></th>
+    <th>Seat Capacity</th>
+    <th></th>
+    <th>Fuel Type</th>
+    <th></th>
+    <th>Daily Price</th>
+    <th></th>
+    <th>Available Stock</th>
+
+  </tr>
+
+  <tr>
+    <td><%= @vehicle.make%></td>
+    <td>|</td>
+    <td><%= @vehicle.model %></td>
+    <td>|</td>
+    <td><%= @vehicle.colour %></td>
+    <td>|</td>
+    <td><%= @vehicle.seat_capacity %></td>
+    <td>|</td>
+    <td><%= @vehicle.fuel_type %></td>
+    <td>|</td>
+    <td><%= @vehicle.daily_price %></td>
+    <td>|</td>
+    <td><%= @vehicle.availability %></td>
+  </tr>
+</table>
+
+<h3> Rentals Customers Information:</h3>
+
+<ul>
+
+  <% @vehicle.customers.each do |customer| %>
+
+  <li>First Name::<%= customer.first_name %></li>
+  <li>Last Name::<%= customer.last_name %></li>
+  <li>Country::<%= customer.country %></li>
+  <li>City::<%= customer.city%></li>
+  <li>Age::<%= customer.age %></li>
+
+
+  <% end %>
+
+</ul>

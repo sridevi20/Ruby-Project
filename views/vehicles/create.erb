@@ -1,0 +1,16 @@
+<h1>Vehicle <%= @vehicle.make %></h1>
+
+ <p>Model:<%= @vehicle.model %></p>
+ <p>Colour:<%= @vehicle.colour %></p>
+ <p>Seat Capacity:<%= @vehicle.seat_capacity %></p>
+ <p>Fuel Type:<%= @vehicle.fuel_type %></p>
+ <p>Daily Price:<%= @vehicle.daily_price %></p>
+ <p>Available Stock:<%= @vehicle.available_stock%></p>
+
+<h3>Customers:</h3>
+
+<ul>
+  <% @vehicle.customers.each do |customer| %>
+  <li><%= customer.name %></li>
+  <% end %>
+</ul>

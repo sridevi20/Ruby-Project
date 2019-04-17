@@ -1,0 +1,23 @@
+<h1>Rentals</h1>
+
+<table>
+
+ <tr>
+    <th>CUSTOMER ID</th>
+    <th></th>
+    <th>VEHICLE ID</th>
+    <th></th>
+
+  <% for rental in @rentals %>
+  <tr>
+    <td><a href="/rentals/<%= rental.id%>"><%= rental.customer.first_name %></a></td>
+    <td>|</td>
+    <td><%= rental.vehicle.make %></td>
+
+  </tr>
+  <% end %>
+
+ </table>
+
+
+<p> <a href="/rentals/<%= rental.id%>/new"> NEW RENTAL</a> </p>

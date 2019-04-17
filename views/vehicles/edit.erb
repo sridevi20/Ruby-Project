@@ -1,0 +1,22 @@
+<form action="/vehicles/<%= @vehicle.id%>" method="post">
+
+  <label for="make">Make:</label>
+  <input type="text" id="make" name="make" value="<%=@vehicle.make%>">
+  <label for="model">Model:</label>
+  <input type="text" id="model" name="model"value="<%=@vehicle.model%>">
+  <label for="colour">Colour:</label>
+  <input type="text" id="colour" name="colour"value="<%=@vehicle.colour%>">
+  <label for="Seat Capacity">"seat_capacity":</label>
+  <input type="text" id="seat_capacity" name="seat_capacity"value="<%=@vehicle.seat_capacity%>">
+  <label for="fuel_type">Select Fuel Type:</label>
+  <select name="fuel_type" id="fuel_type">
+    <option value="petrol">Petrol</option>
+    <option value="diesel">Diesel</option>
+  </select>
+  <label for="daily_price">Daily Price:</label>
+  <input type="text" id="daily_price" name="daily_price"value="<%=@vehicle.daily_price%>">
+  <label for="available_stock">Available Stock:</label>
+  <input type="text" name="available_stock"value="<%=@vehicle.available_stock%>">
+  <input type="submit" value="Update Stock">
+
+</form>

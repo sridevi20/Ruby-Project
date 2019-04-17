@@ -1,0 +1,10 @@
+a:visited {
+  color: purple;
+}
+.main-car-image{
+  float: right;
+  height: 100%;
+}
+.background-image{
+  background-image: url('/images/r8.png')
+}

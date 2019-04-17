@@ -1,0 +1,56 @@
+<html>
+<head>
+
+
+   </head>
+   </html>
+
+ <h1>STOCK ITEMS</h1>
+  <table>
+
+    <tr>
+      <th>Make</th>
+      <th></th>
+      <th>Model</th>
+      <th></th>
+      <th>Colour</th>
+      <th></th>
+      <th>Seat Capacity</th>
+      <th></th>
+      <th>Fuel Type</th>
+      <th></th>
+      <th>Daily Price</th>
+      <th></th>
+      <th>Available Stock</th>
+      <th></th>
+      <th>Change Stock</th>
+    </tr>
+    <% for vehicle in @vehicles %>
+    <tr>
+      <td><a href="/vehicles/<%= vehicle.id %>"><%= vehicle.make %></a></td>
+      <td>|</td>
+      <td><%= vehicle.model %></td>
+      <td>|</td>
+      <td><%= vehicle.colour %></td>
+      <td>|</td>
+      <td><%= vehicle.seat_capacity%></td>
+      <td>|</td>
+      <td><%= vehicle.fuel_type%></td>
+      <td>|</td>
+      <td><%= vehicle.daily_price%></td>
+      <td>|</td>
+      <td><%= vehicle.available_stock%></td>
+      <td>|</td>
+      <td> <a href ="/vehicles/<%= vehicle.id%>/edit"> EDIT STOCK</a> </td>
+      <td>|</td>
+
+      <td> <form action="/vehicles/<%= vehicle.id%>/delete"method="post">
+       <input type="submit" value="DELETE"/>
+
+      </form> </td>
+
+     </tr>
+    <% end %>
+  </table>
+
+   <p> <a href ="/vehicles/<%= vehicle.id%>/new"> ADD STOCK</a> </p>
