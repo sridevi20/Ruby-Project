@@ -30,13 +30,15 @@
 <ul>
   <% @customer.vehicles.each do |vehicle| %>
 
-  <li>Make::<%= vehicle.make %></li>
-  <li>Model::<%= vehicle.model %></li>
-  <li>Colour::<%= vehicle.colour %></li>
-  <li>Seat Capacity::<%= vehicle.seat_capacity %></li>
-  <li>Fuel Type::<%= vehicle.fuel_type%></li>
-  <li>Daily Price::<%= vehicle.daily_price %></li>
-
+  <li>MAKE    :   <%= vehicle.make %></li>
+  <li>MODEL   :   <%= vehicle.model %></li>
+  <li>COLOUR  :   <%= vehicle.colour %></li>
+  <li>SEAT CAPACITY  :   <%= vehicle.seat_capacity %></li>
+  <li>FUEL TYPE   :   <%= vehicle.fuel_type%></li>
+  <li>DAILY PRICE   :   <%= vehicle.daily_price %></li>
+   <br>
+   <br>
+   <br>
 
   <% end %>
 

@@ -37,18 +37,20 @@
   </tr>
 </table>
 
-<h3> Rentals Customers Information:</h3>
+<h3> Rentals Customer Information:</h3>
 
 <ul>
 
   <% @vehicle.customers.each do |customer| %>
 
-  <li>First Name::<%= customer.first_name %></li>
-  <li>Last Name::<%= customer.last_name %></li>
-  <li>Country::<%= customer.country %></li>
-  <li>City::<%= customer.city%></li>
-  <li>Age::<%= customer.age %></li>
-
+  <li>First Name :  <%= customer.first_name%></li>
+  <li>Last Name :  <%= customer.last_name%></li>
+  <li>Country  :    <%= customer.country %></li>
+  <li>City  :       <%= customer.city%></li>
+  <li>Age   :        <%= customer.age %></li>
+  <br>
+  <br>
+  <br>
 
   <% end %>
 

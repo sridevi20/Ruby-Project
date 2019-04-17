@@ -2,7 +2,8 @@ require_relative('../db/sql_runner')
 
 class Rental
 
-  attr_reader :customer_id, :vehicle_id, :id
+  attr_reader :customer_id, :vehicle_id
+  attr_accessor :id
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
@@ -47,7 +48,7 @@ class Rental
   end
 
   def self.find(id)
-    sql = "SELECT * FROM ccustomers WHERE id = $1"
+    sql = "SELECT * FROM rentals WHERE id = $1"
     values = [id]
     hash = SqlRunner.run(sql, values)[0]
     results = Rental.new(hash)
